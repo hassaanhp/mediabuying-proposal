@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('https://db.onlinewebfonts.com/t/9b06c9f08378d1a94b07f42e7e80f238.woff2') format('woff2');
+  }
+
+  body {
+    @apply antialiased text-gray-900 font-helvetica bg-[#FAFAFA];
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md hover:shadow-primary/10;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-gray-700 hover:bg-gray-50 shadow-sm border border-gray-200;
+  }
+
+  .input-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/60;
+  }
+}
